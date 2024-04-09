@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage (checkout) {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: 'main']],
+                checkout([$class: 'GitSCM', branches: [[name: 'feature/jenkins-setup']],
                           userRemoteConfigs: [[url: 'https://github.com/markenewcomb/Hazelnut.git']]])
             }
         }
